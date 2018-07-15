@@ -11,22 +11,6 @@ export class JokeListComponent {
   jokes: Joke[];
 
   constructor() { 
-    // this.jokes = [{
-    //   setup: "What did the cheese say when it looked int the mirror?",
-    //   punchline: "Hello-Me (Halloumi)",
-    //   hide:true
-    // },
-    // {
-    //   setup: "What kind of cheese say when it looked int the mirror?",
-    //   punchline: "Mask a pony",
-    //   hide:true
-    // },
-    // {
-    //   setup: "A kid",
-    //   punchline: "I thought",
-    //   hide:true
-    // }]
-
     this.jokes = [
       new Joke("What did the cheese say when it looked int the mirror?",
         "Hello-Me (Halloumi)"),
@@ -37,9 +21,8 @@ export class JokeListComponent {
     ]
   }
 
-  // toggle(joke){
-  //   joke.hide = !joke.hide;
-  // }
-
+  addJoke(joke){
+    this.jokes.unshift(joke);
+  }
 
 }
