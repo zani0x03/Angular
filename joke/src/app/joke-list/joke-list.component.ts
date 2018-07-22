@@ -17,12 +17,21 @@ export class JokeListComponent {
         new Joke("What kind of cheese say when it looked int the mirror?",
         "Mask a pony"),
         new Joke("A kid",
-        "I thought"),
+        "I thought")
     ]
   }
 
-  addJoke(joke){
-    this.jokes.unshift(joke);
+  // addJoke(joke){
+  //   this.jokes.unshift(joke);
+  // }
+
+  addJoke(){
+    this.jokes.unshift(new Joke("Joke Main","Joke Description"));
+  }
+
+
+  deleteJoke(){
+    this.jokes = []
   }
 
 }

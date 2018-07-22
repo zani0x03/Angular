@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked,OnChanges, OnInit, DoCheck, OnDestroy } from '@angular/core';
 import { Joke } from '../class/joke';
 
 @Component({
@@ -21,6 +21,45 @@ import { Joke } from '../class/joke';
 
 // }
 
-export class JokeComponent{  
+export class JokeComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked,
+  AfterViewInit, AfterViewChecked
+{  
   @Input('joke') data: Joke;
+
+  constructor(){
+    console.log(`new - data is ${this.data}`);
+  }
+
+  ngOnChanges(){
+    console.log(`ngOnChanges - data is ${this.data}`);
+  }
+
+  ngOnInit(){
+    console.log(`ngOnInit - data is ${this.data}`);
+  }
+
+  ngDoCheck(){
+    console.log("ngDoCheck");
+  }
+
+  ngAfterContentInit(){
+    console.log("ngAfterContentInit");
+  }
+
+  ngAfterContentChecked(){
+    console.log("ngAfterContentChecked");
+  }
+
+  ngAfterViewInit(){
+    console.log("ngAfterViewInit");
+  }
+
+  ngAfterViewChecked(){
+    console.log("ngAfterViewChecked");
+  }
+
+  ngOnDestroy(){
+    console.log("ngOnDestroy");
+  }
+
 }

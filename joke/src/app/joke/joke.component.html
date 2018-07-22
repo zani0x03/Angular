@@ -1,11 +1,12 @@
-<!-- <h1>{{setup}}</h1>
-<p>{{punchline}}</p> -->
-
 <div class="card card-block">
     <h4 class="card-litle">
-        {{data.setup}}
+        <!-- {{data.setup}} -->
+        <ng-content select=".setup"></ng-content>
     </h4>
-    <p class="card-text" [hidden]="data.hide">{{data.punchline}}</p>
+    <p class="card-text" [hidden]="data.hide">
+        <!-- {{data.punchline}} -->
+        <ng-content select=".punchline"></ng-content>
+    </p>
 
     <a class="btn btn-primary" (click)="data.toggle()"> Tell me</a>
 </div>
