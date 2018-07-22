@@ -18,7 +18,14 @@
   </li>
 </ul> -->
 
-<h1>
+<!-- <h1>
   Welcome to {{title}}!
   <joke-list></joke-list>
-</h1>
+</h1> -->
+
+<joke-list>
+  <joke [joke]="joke">
+    <span class="setup">{{joke.setup}}?</span>
+    <h1 class="punchline">{{joke.punchline}}</h1>
+  </joke>
+</joke-list>

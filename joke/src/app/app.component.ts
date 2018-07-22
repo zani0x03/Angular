@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Joke } from './class/joke';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  joke: Joke = new Joke("teste novo", "teste detalhe");
 }
