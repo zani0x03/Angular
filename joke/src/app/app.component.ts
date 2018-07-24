@@ -7,6 +7,6 @@ import { Joke } from './class/joke';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  joke: Joke = new Joke("teste novo", "teste detalhe");
+  // title = 'app';
+  // joke: Joke = new Joke("teste novo", "teste detalhe");
 }
